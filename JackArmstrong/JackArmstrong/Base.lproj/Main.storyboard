@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="UnitedSansReg-Bold.otf">
+            <string>UnitedSansReg-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JackArmstrong" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HVX-Su-unl">
+                                <rect key="frame" x="0.0" y="289" width="414" height="573"/>
+                                <color key="backgroundColor" red="0.67450980392156867" green="0.18431372549019609" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="KX7-Rf-gCB">
+                                    <size key="itemSize" width="160" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="center" reuseIdentifier="soundCell" id="OLc-lI-o0i" customClass="SoundCollectionViewCell" customModule="JackArmstrong" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="160" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OM6-jN-WyA">
+                                                    <rect key="frame" x="8" y="8" width="144" height="84"/>
+                                                    <fontDescription key="fontDescription" name="UnitedSansReg-Bold" family="United Sans Reg" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="OM6-jN-WyA" firstAttribute="top" secondItem="OLc-lI-o0i" secondAttribute="top" constant="8" id="5Z8-6J-60E"/>
+                                            <constraint firstAttribute="bottom" secondItem="OM6-jN-WyA" secondAttribute="bottom" constant="8" id="bfK-6j-9WW"/>
+                                            <constraint firstItem="OM6-jN-WyA" firstAttribute="leading" secondItem="OLc-lI-o0i" secondAttribute="leading" constant="8" id="kAW-g3-HZS"/>
+                                            <constraint firstAttribute="trailing" secondItem="OM6-jN-WyA" secondAttribute="trailing" constant="8" id="p37-4H-FFj"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="soundLabel" destination="OM6-jN-WyA" id="wmo-da-ulp"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="GIo-UK-Hxd"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jP0-pU-Ba0"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE THE JACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWD-19-zhn">
+                                <rect key="frame" x="20" y="54" width="374" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="2fR-Os-9NF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="UnitedSansReg-Bold" family="United Sans Reg" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jack.png" translatesAutoresizingMaskIntoConstraints="NO" id="j1v-C2-UOu">
+                                <rect key="frame" x="132" y="114" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="9xb-o5-M0I"/>
+                                    <constraint firstAttribute="height" constant="150" id="PXr-Ug-Xc6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67450980392156867" green="0.18431372549019609" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HVX-Su-unl" secondAttribute="trailing" id="1ZD-z2-Q1Z"/>
+                            <constraint firstItem="aWD-19-zhn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="3VZ-dN-gX5"/>
+                            <constraint firstItem="j1v-C2-UOu" firstAttribute="top" secondItem="aWD-19-zhn" secondAttribute="bottom" constant="25" id="Duk-1f-OrE"/>
+                            <constraint firstItem="HVX-Su-unl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Syg-mE-p8a"/>
+                            <constraint firstItem="aWD-19-zhn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cJ7-Mn-qcL"/>
+                            <constraint firstItem="HVX-Su-unl" firstAttribute="top" secondItem="j1v-C2-UOu" secondAttribute="bottom" constant="25" id="nha-nn-Atb"/>
+                            <constraint firstItem="j1v-C2-UOu" firstAttribute="centerX" secondItem="HVX-Su-unl" secondAttribute="centerX" id="qMC-k9-UWg"/>
+                            <constraint firstItem="aWD-19-zhn" firstAttribute="centerX" secondItem="j1v-C2-UOu" secondAttribute="centerX" id="xQa-z2-DqZ"/>
+                            <constraint firstItem="HVX-Su-unl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xxe-rn-Sjv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="jackImage" destination="j1v-C2-UOu" id="j0j-L6-Uz6"/>
+                        <outlet property="soundButtonCollectionView" destination="HVX-Su-unl" id="cLQ-fb-mAD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="jack.png" width="212" height="296"/>
+    </resources>
+</document>
